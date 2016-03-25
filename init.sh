@@ -16,7 +16,7 @@ PIDFILE=/var/awslogs/state/awslogs.pid
 LOCKFILE=/var/awslogs/state/awslogs.lock
 MUTEXFILE=/var/awslogs/state/awslogs.mutex
 
-sed -i "s/{{aws-region}}/$EC2_REGION/g" $DAEMON
+sed -i "s/{{aws-region}}/$EC2_REGION/g" /var/awslogs/etc/aws.conf
 sed -i "s/{{syslog-cwl-group}}/$SYSLOG/g" $CONFIG_FILE
 sed -i "s/{{authlog-cwl-group}}/$AUTHLOG/g" $CONFIG_FILE
 
