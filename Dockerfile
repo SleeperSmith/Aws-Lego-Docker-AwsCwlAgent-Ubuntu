@@ -11,6 +11,6 @@ RUN python /home/local/awslogs-agent-setup.py \
     service awslogs stop
 RUN rm /home/local/awslogs-agent-setup.py && \
     rm /var/log/awslogs.log && \
-    rm /var/awslog/state/agent-state
+    rm /var/awslogs/state/agent-state
     
 ENTRYPOINT ["/home/local/init.sh"]
