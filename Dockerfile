@@ -9,7 +9,7 @@ RUN python /home/local/awslogs-agent-setup.py \
         -c /home/local/default.conf \
         -n && \
     service awslogs stop
-RUN rm .\awslogs-agent-setup.py && \
+RUN rm /home/local/awslogs-agent-setup.py && \
     rm /var/log/awslogs.log && \
     rm /var/awslog/state/agent-state
     
