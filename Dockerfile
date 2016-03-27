@@ -2,7 +2,7 @@ FROM ubuntu:14.04.4
 
 ADD awslogs-agent-setup.py CloudWatchMonitoringScripts-1.2.1.zip default.conf /home/local/
 RUN apt-get update && \
-    apt-get install -y python unzip libwww-perl libdatetime-perl
+    apt-get install -y python curl unzip libwww-perl libdatetime-perl
 
 RUN unzip /home/local/CloudWatchMonitoringScripts-1.2.1.zip && \
     rm /home/local/CloudWatchMonitoringScripts-1.2.1.zip
